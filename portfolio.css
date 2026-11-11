@@ -8,7 +8,7 @@ surface ##0052B8 section backgrounds
 header {
       background-color: #222;  /* the dark bar */
       color: white;
-      padding: 10px 20px;
+      padding: 25px 35px;
       display: flex;
       flex-direction: column;  /* phone: h1 above nav */
       justify-content: space-between;
@@ -17,8 +17,23 @@ header {
 header h1 {
 color:chartreuse;
 font-family: 'Limelight', serif;
-font-size: 40px;
+font-size: 50px;
 text-align: center;
+}
+.skip {
+position: absolute;
+left: -9999px;
+}
+.skip:focus {
+position: static;
+}
+.subtitle {
+  color:white;
+  margin: 0;
+  text-align: center; /* lines up with the centred heading */
+}
+.title-block h1 {
+  margin-bottom: 0;   /* remove the gap under the heading */
 }
 header nav {
 display: flex;
@@ -34,10 +49,6 @@ padding: 0.3rem 0;
 transition: color 0.2s;
  font-family: "DM Sans", sans-serif;
   font-optical-sizing: auto;
-}
-main {
-display: flex;
-gap: 1.5rem;
 }
 main section {
 flex: 1;
@@ -145,5 +156,12 @@ img {
  @media (min-width: 1200px) {
   .projects {
     width: 50%;
+  }
+}
+
+/* Small screens: no 3D scene, so hide its empty box */
+@media (max-width: 699px) {
+  #scene {
+    display: none;
   }
 }
