@@ -140,6 +140,22 @@ img {
   flex: 1;       /* share the row with the hobbies list, half each */
   min-width: 0;  /* let it shrink when the window narrows */
 }
+.inline-link {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px; /* 8px vertical space between stacked links */
+  list-style: none;
+  padding: 0;
+}
+.inline-link a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 48px;
+  min-width: 48px;
+  padding: 8px 12px;
+  box-sizing: border-box;
+}
   .right-container {
     flex-direction: row; /* list beside picture/scene */
   }
