@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 100" width="160" height="100">
+  <title>A cartoon bathtub with an outboard motor</title>
+  <!-- water -->
+  <path d="M0 82 Q20 74 40 82 T80 82 T120 82 T160 82 V100 H0 Z" fill="#7cc3e3"/>
+  <!-- tub body -->
+  <path d="M22 42 H130 Q132 42 131 46 L124 72 Q122 80 112 80 H40 Q30 80 28 72 L21 46 Q20 42 22 42 Z"
+        fill="#ffffff" stroke="#0b5f86" stroke-width="3"/>
+  <!-- rim -->
+  <rect x="16" y="36" width="120" height="8" rx="4" fill="#0b5f86"/>
+  <!-- claw feet -->
+  <circle cx="40" cy="82" r="4" fill="#0b5f86"/>
+  <circle cx="112" cy="82" r="4" fill="#0b5f86"/>
+  <!-- outboard motor -->
+  <rect x="134" y="30" width="16" height="22" rx="3" fill="#d6453d"/>
+  <rect x="140" y="52" width="4" height="26" fill="#10212b"/>
+  <!-- tap -->
+  <path d="M30 36 V26 H40" fill="none" stroke="#0b5f86" stroke-width="3"/>
+</svg>
