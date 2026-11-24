@@ -1,4 +1,5 @@
-/* Bathtub Race entry form. Part 3 adds the grid layout. */
+/* Bathtub Race entry form: the Lab 8 reference, with the Lab 9 heat map
+   styles at the end. */
 
 body {
     font-family: system-ui, sans-serif;
@@ -15,7 +16,7 @@ main {
     margin: 0 auto;
 }
 
-/* The rules start hidden; the script in Part 1 toggles this class. */
+/* The rules start hidden; the rules script from Lab 8 toggles this class. */
 .hidden {
     display: none;
 }
@@ -35,31 +36,86 @@ button {
     padding: 0.5rem 1rem;
     border: 2px solid #0b5f86;
     background: #ffffff;
-    color: hsl(199, 85%, 28%);
+    color: #0b5f86;
     cursor: pointer;
 }
+
 button:hover,
 button:focus {
     background: #0b5f86;
     color: #ffffff;
 }
+
+/* Lab 8 Part 3. On a phone the form is one column: each label sits
+   above its field, in source order. */
 form {
-display: grid;
-gap: 0.5rem;
-background: #469bc2
+    display: grid;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: #ffffff;
 }
+
+/* The event choices and the button take the full width at any size. */
 fieldset,
 form button {
-grid-column: 1 / -1;
-justify-self: center
+    grid-column: 1 / -1;
 }
+
+form button {
+    justify-self: center;
+    margin-top: 1rem;
+}
+
+/* Lets the checkbox sit at its natural size instead of stretching. */
+input[type="checkbox"] {
+    justify-self: start;
+}
+
+.note {
+    margin: 0;
+    color: #3d5866;
+}
+
+/* 700px and up: labels in a column of their own, fields beside them. */
 @media (min-width: 700px) {
     form {
         grid-template-columns: 12rem 1fr;
         align-items: center;
         column-gap: 1rem;
     }
+
     .note {
         grid-column: 2;
     }
+}
+
+/* Lab 9. The heat map is drawn on a canvas laid over the form. The form
+   is its positioning box, and pointer-events: none lets every click and
+   key reach the fields underneath. */
+form {
+    position: relative;
+}
+
+#heatmap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+#heat-controls {
+    margin-top: 1.5rem;
+}
+
+#heat-controls button {
+    margin: 0 0.5rem 0.5rem 0;
+}
+
+#tracker-status,
+#hover-status,
+#heat-summary {
+    margin: 0.25rem 0;
 }
